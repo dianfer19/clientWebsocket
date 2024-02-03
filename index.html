@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSocket Test</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="p-4 max-w-md mx-auto">
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="startWebSocket()">
+    Iniciar
+    Conexión
+  </button>
+  <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onclick="stopWebSocket()">
+    Finalizar Conexión
+  </button>
+  <div class="mt-4">
+    <input type="text" id="messageInput" class="shadow border rounded py-2 px-3 text-grey-darker"
+           placeholder="Escribe tu mensaje aquí">
+    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onclick="sendMessage()">
+      Enviar
+    </button>
+  </div>
+</div>
+<script type="module" src="main.js"></script>
+
+</body>
+</html>
