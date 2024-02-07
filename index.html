@@ -7,23 +7,29 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<div class="p-4 max-w-md mx-auto">
-  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="startWebSocket()">
-    Iniciar
-    Conexión
-  </button>
-  <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onclick="stopWebSocket()">
-    Finalizar Conexión
-  </button>
+<div class="p-4 max-w-4xl mx-auto">
+  <div id="messages" class="h-72 overflow-auto bg-white shadow border rounded py-2 px-3 space-y-2">
+    <!-- Los mensajes se mostrarán aquí -->
+  </div>
   <div class="mt-4">
     <input type="text" id="messageInput" class="shadow border rounded py-2 px-3 text-grey-darker"
-           placeholder="Escribe tu mensaje aquí">
+           placeholder="Escribe tu mensaje aquí" >
     <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onclick="sendMessage()">
       Enviar
+    </button>
+    <button class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded" onclick="limpiar()">
+      Limpiar
+    </button>
+  </div>
+  <div class="mt-4">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="startWebSocket()">
+      Unirse al grupo
+    </button>
+    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onclick="stopWebSocket()">
+      Salirse del grupo
     </button>
   </div>
 </div>
 <script type="module" src="main.js"></script>
-
 </body>
 </html>
